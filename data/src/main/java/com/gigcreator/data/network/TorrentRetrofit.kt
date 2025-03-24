@@ -6,7 +6,7 @@ import com.gigcreator.domain.models.TorrentInstance
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface TorrentRetrofit {
+internal interface TorrentRetrofit {
 
     @GET("torrent/list")
     suspend fun torrent(

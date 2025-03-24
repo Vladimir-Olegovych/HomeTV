@@ -7,7 +7,7 @@ import com.gigcreator.domain.models.TorrentInstance
 import com.gigcreator.domain.repository.TorrentRetrofitRepository
 import kotlinx.coroutines.delay
 
-class TorrentRetrofitRepositoryImpl(private val torrentRetrofit: TorrentRetrofit): TorrentRetrofitRepository {
+internal class TorrentRetrofitRepositoryImpl(private val torrentRetrofit: TorrentRetrofit): TorrentRetrofitRepository {
     override suspend fun torrent(magnetUri: String): TorrentInstance? {
         return requestTo(8) { torrentRetrofit.torrent(magnetUri) }
     }

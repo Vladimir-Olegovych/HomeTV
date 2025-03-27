@@ -35,6 +35,8 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.paging.runtime.ktx)
+
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
     implementation(libs.converter.jackson)

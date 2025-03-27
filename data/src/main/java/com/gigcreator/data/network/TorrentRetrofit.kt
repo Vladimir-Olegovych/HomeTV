@@ -26,7 +26,7 @@ internal interface TorrentRetrofit {
     ): DataResult
 
     companion object {
-        const val BASE_URL = "http://192.168.1.200:8082/api/v1/"
+        const val BASE_URL = "http://192.168.1.200:8080/api/v1/"
         const val TIMEOUT = 30_000L
     }
 }

@@ -5,7 +5,7 @@ import com.gigcreator.domain.models.SearchResult
 import java.io.Serializable
 
 
-class SourceSearch: Serializable {
+class SourceSearch {
     @JsonProperty("results")
     val results: Array<SearchResult> = emptyArray()
     @JsonProperty("source_name")

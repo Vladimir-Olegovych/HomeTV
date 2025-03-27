@@ -1,4 +1,4 @@
-package com.gigcreator.hometv.screens.main
+package com.gigcreator.hometv.screens.main.mvvm
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -12,9 +12,11 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
     private val torrentUseCase: TorrentRetrofitUseCase
 ): ViewModel() {
-    fun search(query: String, page: Int){
+    fun searchPaging(query: String) = torrentUseCase.searchPaging(query)
+    fun search(query: String, page: Int) {
         viewModelScope.launch(Dispatchers.IO) {
-            torrentUseCase.search(query, page)
+            val data = torrentUseCase.search(query, page)
+            println(data[0].results.size)
         }
     }
 }

@@ -1,9 +1,8 @@
 package com.gigcreator.domain.models
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import java.io.Serializable
 
-class DataResult: Serializable {
+class DataResult {
     @JsonProperty("data")
     val data: String = ""
     @JsonProperty("image")
